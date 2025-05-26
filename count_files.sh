@@ -4,5 +4,5 @@
  read repertoire
 
 # Compter le nombre de fichiers dans le répertoire
-    nb_fichiers=$(find "$repertoire" -maxdepth 1 -type f | wc -l)
-    echo "Le dossier '$repertoire' contient $nb_fichiers fichier(s) ."
+    nb_fichiers=$(ls $repertoire | wc -l)
+    echo "Le dossier $repertoire contient $nb_fichiers fichier(s) ."
