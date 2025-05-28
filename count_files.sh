@@ -1,8 +1,11 @@
 #!/bin/bash
 
-# Demander à l'utilisateur d'entrer le nom du répertoire
- read repertoire
+# ce script permet de compter le nombre de fichiers dans un répetoire.
 
-# Compter le nombre de fichiers dans le répertoire
-    nb_fichiers=$(ls $repertoire | wc -l)
-    echo "Le dossier $repertoire contient $nb_fichiers fichier(s) ."
+read repertoire
+
+
+if [ -d "$repertoire" ]; then
+    nb_fichiers=$(ls -1 "$repertoire" | wc -l)
+    echo "Le dossier $repertoire contient $nb_fichiers fichiers(s) ."
+fi
