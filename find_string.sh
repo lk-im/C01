@@ -1,18 +1,12 @@
 #!/bin/bash
 
-# Paramètres de la commande
-fichier_a_rechercher="sample.txt"
-chaine_a_rechercher="bonjour"
+# Définir le fichier et la chaîne à rechercher
+read  fichier
+read  chaine
 
-# Vérification des paramètres
-#if [ -z "$fichier_a_rechercher" ] || [ -z "$chaine_a_rechercher" ]; then
- # echo "Usage: $0 <fichier> <chaine_a_rechercher>"
-  #exit 1
-#fi
-
-# Recherche avec grep
-if grep -q "$chaine_a_rechercher" "$fichier_a_rechercher" ; then
-  echo "La chaîne '$chaine_a_rechercher' a été trouvée dans '$fichier_a_rechercher'."
+# Utiliser grep pour rechercher la chaîne dans le fichier
+if grep -q "$fichier" "$chaine"; then
+    echo "La chaîne '$chaine' a été trouvée dans $fichier."
 else
-  echo "La chaîne '$chaine_a_rechercher' n'a pas été trouvée dans '$fichier_a_rechercher'."
+    echo "La chaîne '$chaine' n'a pas été trouvée dans $fichier."
 fi
