@@ -1,11 +1,7 @@
 #!/bin/bash
+read -a arg
+i=1
 
-# Script qui affiche les arguments reçus ligne par ligne avec leur numéro
-
-echo "$@"
-
-count=1
-for arg in "$@"; do
-  echo "Argument $count: $arg"
-  ((count++))
+for arg in "${arg[@]}"; do
+    echo "Argument $((i++)): $arg"
 done
