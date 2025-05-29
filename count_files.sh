@@ -2,10 +2,13 @@
 
 # ce script permet de compter le nombre de fichiers dans un répetoire.
 
-read repertoire
+read dossier
 
-
-if [ -d "$repertoire" ]; then
-    nb_fichiers=$(ls -1 "$repertoire" | wc -l)
-    echo "Le dossier $repertoire contient $nb_fichiers fichiers(s) ."
+# Vérifier si le répertoire existe
+if [ -d "$dossier" ]; then
+# Compter le nombre de fichiers dans le répertoire
+    nb_fichiers=$(ls -1 "$dossier" | wc -l)
+    echo "Le dossier $dossier contient $nb_fichiers fichiers(s)."
+else
+    echo "Le dossier $dossier n'existe pas."
 fi
