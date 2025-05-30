@@ -6,3 +6,4 @@ read dossier
 nb_fichiers=$(ls -1 "$dossier" | wc -l) 
 counts=$(echo $count)
     echo "Le dossier $dossier contient $nb_fichiers fichiers(s)."
+    
