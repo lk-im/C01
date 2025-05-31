@@ -5,7 +5,8 @@ read fichier
 read chaine
 
 # Utiliser grep pour rechercher la chaîne de caractères dans le fichier
-grep "$chaine" "$fichier"
+if ! grep "$chaine" "$fichier"; then
 
-  echo "La chaîne '$chaine' n'a pas été trouvée dans $fichier."
-exit   
+  echo "La chaîne '$chaine' n'a pas été trouvée dans '$fichier'."
+fi
+   
