@@ -2,8 +2,6 @@
 
 # Demande les nombres et l'opérateur
 read num1 num2 op
-#read -p "Entrez le deuxième nombre: " num2
-#read -p "Entrez l'opérateur (+, -, *, /): " op
 
 # Vérifie que les entrées sont valides
 if ! [[ "$num1" =~ ^[0-9]+$ ]] || ! [[ "$num2" =~ ^[0-9]+$ ]]; then
